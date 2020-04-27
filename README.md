@@ -1,4 +1,4 @@
-Machine Learning Homework Requirements:
+# Fish Weight Prediction Model:
 
 ![Fish](images/Fishlength.jpg)
 
