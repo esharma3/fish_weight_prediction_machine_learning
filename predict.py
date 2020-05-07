@@ -1,12 +1,16 @@
-### YOU WRITE THIS ###
+################################################################################################
+#                           Importing dependencies here                                        #
+################################################################################################
 from joblib import load
 from preprocess import prep_data
 import pandas as pd
 from sklearn.metrics import mean_squared_error, r2_score
+import numpy as np
 
-# import numpy as np
-# from sklearn.compose import ColumnTransformer 
-# from sklearn.preprocessing import OneHotEncoder
+
+#################################################################################################
+#                          Prepping data for prediction                                         #
+#################################################################################################
 
 def predict_from_csv(path_to_csv):
 
@@ -18,24 +22,26 @@ def predict_from_csv(path_to_csv):
 
     predictions = reg.predict(X)
 
-    # return predictions
-    return predictions, y 
+    return predictions
+
+
+################################################################################################
+#                          Testing using "fish_holdout_demo.csv"                               #
+################################################################################################
 
 if __name__ == "__main__":
 
-    predictions, y_truth = predict_from_csv("fish_holdout_demo_new.csv")
+    predictions = predict_from_csv("fish_holdout_demo_new.csv")
+    y_truth = pd.read_csv("fish_holdout_demo_new.csv")["Weight"].values
 
-    # y_truth = pd.read_csv("fish_holdout_demo.csv")["Weight"].values
     ho_mse = mean_squared_error(y_truth, predictions)
     r2_score = r2_score(y_truth, predictions)
+
     print(y_truth)
     print(predictions)
     print(ho_mse)
     print(r2_score)
-######
 
-    # print(predictions)
-######
 
 ### WE WRITE THIS ###
     # from sklearn.metrics import mean_squared_error
