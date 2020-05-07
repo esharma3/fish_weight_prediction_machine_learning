@@ -12,6 +12,7 @@ import numpy as np
 #                          Prepping data for prediction                                         #
 #################################################################################################
 
+
 def predict_from_csv(path_to_csv):
 
     df = pd.read_csv(path_to_csv)
@@ -44,10 +45,9 @@ if __name__ == "__main__":
 
 
 ### WE WRITE THIS ###
-    # from sklearn.metrics import mean_squared_error
-    # ho_predictions = predict_from_csv("fish_holdout.csv")
-    # ho_truth = pd.read_csv("fish_holdout.csv")["Weight"].values
-    # ho_mse = mean_squared_error(ho_truth, ho_predictions)
-    # print(ho_mse)
+# from sklearn.metrics import mean_squared_error
+# ho_predictions = predict_from_csv("fish_holdout.csv")
+# ho_truth = pd.read_csv("fish_holdout.csv")["Weight"].values
+# ho_mse = mean_squared_error(ho_truth, ho_predictions)
+# print(ho_mse)
 ######
-
