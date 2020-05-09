@@ -1,7 +1,6 @@
 ################################################################################################
 # 						    		 importing dependencies here                               #
 ################################################################################################
-
 import numpy as np
 import pandas as pd
 
@@ -22,6 +21,7 @@ from sklearn.linear_model import LinearRegression
 
 # for saving the model
 from joblib import dump
+
 
 ################################################################################################
 # 											MAIN 											   #
